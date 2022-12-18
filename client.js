@@ -7,6 +7,14 @@ const connect = function () {
 
   conn.on("data", (data) =>{
     console.log("server message: " + data)
+  });
+
+  conn.on("connect",() =>{
+    console.log("Successfully connected to game server");
+  });
+
+  conn.on("connect", () => {
+    conn.write("Name: JAV")
   })
 
   // interpret incoming data as text
