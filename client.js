@@ -9,13 +9,19 @@ const connect = function () {
     console.log("server message: " + data)
   });
 
-  conn.on("connect",() =>{
+  conn.on("connect", () =>{
     console.log("Successfully connected to game server");
+    
   });
 
   conn.on("connect", () => {
     conn.write("Name: JAV")
+    //conn.write("Move: up")
   })
+
+  // conn.on("connect", () => {
+  //   conn.write("Move: up")
+  // })
 
   // interpret incoming data as text
   conn.setEncoding("utf8");
