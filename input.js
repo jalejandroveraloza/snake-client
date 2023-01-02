@@ -30,6 +30,12 @@ const handleUserInput = function (key) {
       connection.write('Move: right')
       //console.log("Move: rigth")
     }
+    if(key === "f"){
+      connection.write("Say: keep going")
+    }
+    if(key === "g"){
+      connection.write("Say: you almost got it")
+    }
     if (key === '\u0003') {
       process.exit();
     }
