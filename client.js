@@ -20,7 +20,7 @@ const connect = function () {
   })
 
   // conn.on("connect", () => {
-  //   conn.write("Move: up")
+  //   conn.write(w = "Move: up")
   // })
 
   // interpret incoming data as text
@@ -29,4 +29,6 @@ const connect = function () {
   return conn;
 };
 
-module.exports = connect;
+module.exports = {
+  connect
+}
